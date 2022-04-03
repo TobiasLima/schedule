@@ -1,0 +1,16 @@
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  align-items: flex-start;
+
+  h1 {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  p {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}

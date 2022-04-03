@@ -1,0 +1,27 @@
+.team {
+
+}
+
+.teamList {
+  display: flex;
+  flex-wrap: wrap;
+
+  > div {
+    background: linear-gradient(to bottom right, #3CCE85, #B6FF6D);
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    padding: .25rem;
+
+    & + div {
+      margin-left: 1rem;
+    }
+
+    img {
+      display: block;
+      width: 6rem;
+      height: 6rem;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+  }
+}

@@ -1,0 +1,22 @@
+.footerContainer {
+  height: 3rem;
+  background-color: #313131;
+
+  .footerContent {
+    max-width: var(--containerWidth);
+    height: 3rem;
+    margin: 0 auto;
+    padding: 0 2rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    p {
+      color: var(--white);
+      font-weight: 600;
+      font-size: .8rem;
+    }
+
+  }
+}

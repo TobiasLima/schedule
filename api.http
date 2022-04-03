@@ -1,0 +1,7 @@
+###
+GET http://localhost:3000/api/email
+Content-Type: application/json
+{
+  "subject" : "Assunto",
+  "content": "Conteúdo"
+}

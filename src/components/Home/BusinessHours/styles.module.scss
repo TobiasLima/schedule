@@ -1,0 +1,36 @@
+.businessHours {
+  margin-bottom: 2rem;
+
+  .tableContainer {
+    background-color: var(--gray-100);
+    border-radius: 10px;
+    padding: .5rem;
+
+    table {
+      width: 100%;
+
+      thead {
+
+        th {
+          padding: 1rem 0;
+        }
+      }
+
+      tbody {
+
+        tr {
+
+          td {
+            text-align: center;
+            font-size: .8rem;
+            padding: .5rem 0;
+
+            &:nth-child(1) {
+              font-weight: 600;
+            }
+          }
+        }
+      }
+    }
+  }
+}
