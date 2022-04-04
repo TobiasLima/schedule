@@ -1,12 +1,12 @@
 import { useState } from 'react';
-import { FiLogOut, FiGithub } from 'react-icons/fi';
+import { FiLogOut } from 'react-icons/fi';
 import { FaGithub } from 'react-icons/fa';
 
 
 import styles from './styles.module.scss';
 
 export function SignInButton() {
-  const [IsUserLogged, setIsUserLogged] = useState(false); 
+  const [IsUserLogged] = useState(false); 
 
   return IsUserLogged ? (
       <button type="button" className={styles.signInButton}>
