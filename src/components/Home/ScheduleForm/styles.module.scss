@@ -31,6 +31,7 @@
         cursor: pointer;
         transition: all .3s;
         margin-bottom: .5rem;
+        max-width: calc(50% - 0.25rem);
 
         img {
           width: 50px;

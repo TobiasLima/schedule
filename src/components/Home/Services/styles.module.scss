@@ -13,6 +13,10 @@
     display: flex;
     justify-content: space-between;
 
+    @media(max-width: 545px) {
+      flex-direction: column;
+    }
+
     & + .servicesItem {
       margin-top: .2rem 
     }
@@ -49,6 +53,10 @@
     .priceBox {
       display: flex;
       align-items: center;
+
+      @media(max-width: 545px){
+        margin-top: 0.5rem;
+      }
 
       p {
         margin-right: 1rem;

@@ -9,11 +9,6 @@
     margin-bottom: 0;
   }
 
-  p {
-    margin-top: 0;
-    margin-bottom: 0;
-  }
-
   .closeBtn {
     background-color: #ff2323;
     border: 0;
@@ -33,6 +28,39 @@
 
     svg {
       display: block;
+    }
+  }
+}
+
+.scheduleList {
+
+  .scheduleItem {
+    background-color: var(--gray-100);
+    margin-bottom: .3rem;
+    padding: 1rem;
+    border-radius: 10px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    h4 {
+      margin: 0;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    button {
+      background-color: var(--gray-500);
+      color: var(--white);
+      opacity: .8;
+      border: 0;
+      padding: 0.5rem 1rem;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
     }
   }
 }

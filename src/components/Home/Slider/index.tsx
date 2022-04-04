@@ -1,6 +1,14 @@
+import SlickSlider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 import styles from './styles.module.scss';
 
-const slideImages = [
+interface slideProps {
+  url: string;
+}
+
+const slideImages: slideProps[] = [
   {
     url: 'images/slide_1.jpg',
   },
@@ -11,9 +19,26 @@ const slideImages = [
 
 export function Slider() {
 
+  const settings = {
+    dots: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    appendDots: dots => (
+      <div style={{bottom: '1rem'}} >
+        <ul className={styles.dots}> {dots} </ul>
+      </div>
+    ),
+  };
+
   return (
     <div className={styles.slider}>
-      <img src="images/slide_1.jpg" alt="banner" />
+      <SlickSlider {...settings}>
+        {slideImages.map((item, index) => (
+          <div key={index} className={styles.eachSlide} >
+            <img src={item.url} alt="banner" />
+          </div>
+        ))}
+      </SlickSlider>
     </div>
   );
 }

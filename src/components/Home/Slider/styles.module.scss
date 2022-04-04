@@ -1,13 +1,33 @@
 .slider {
-  position: relative;
-  height: 20rem;
-  width: 100%;
-  overflow: hidden;
-
-  img {
+  .eachSlide {
+    position: relative;
+    height: 20rem;
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 10px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+  }
+}
+
+.dots {
+  margin: 0;
+
+  li {
+    margin: 0;
+
+    button:before {
+      font-size: .6rem;
+      opacity: .50;
+      color: #fff;
+    }
+
+    &.slick-active {
+      background-color: red;
+    }
   }
 }

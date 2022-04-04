@@ -26,6 +26,9 @@ interface IFormInput {
   employee: string;
   day: string;
   hour: string;
+  service: string;
+  price: string;
+  time: string;
 }
 
 const employee = [
@@ -50,6 +53,9 @@ const schema = yup.object({
   employee: yup.string().required('Selecione um funcionário.'),
   day: yup.string().required('Selecione o dia que deseja agendar.'),
   hour: yup.string().required('Selecione o horário que deseja agendar.'),
+  service: yup.string(),
+  price: yup.string(),
+  time: yup.string(),
 }).required();
 
 export function ScheduleForm({scheduleData, closeForm}: FormModalProps) {
@@ -71,7 +77,7 @@ export function ScheduleForm({scheduleData, closeForm}: FormModalProps) {
   }, [errors]);
 
   function nextTenDays(): string[] {
-    let dates = [];
+    let dates: string[] = [];
     const current = moment();
     let n = 8;
     while(n > 0){
@@ -115,6 +121,10 @@ export function ScheduleForm({scheduleData, closeForm}: FormModalProps) {
     <div className={styles.scheduleForm}>
       <form onSubmit={handleSubmit(onSubmit)}>
 
+        <input type="hidden" {...register("service")} value={scheduleData.name} />
+        <input type="hidden" {...register("price")} value={scheduleData.price} />
+        <input type="hidden" {...register("time")} value={scheduleData.time} />
+
         <div className={styles.field}>
           <h4>Primeiro, escolha um profissional</h4>
           <div className={styles.radioField} >
@@ -123,7 +133,7 @@ export function ScheduleForm({scheduleData, closeForm}: FormModalProps) {
               <label key={index} className={item.id === selectedEmployee?.id ? styles.active : ''}>
                 <img src={item.avatar} alt={item.name} />
                 <h5>{item.name}</h5>
-                <input {...register("employee")} type="radio" value={item.id} onChange={() => setSelectedEmployee(item)} />
+                <input {...register("employee")} type="radio" value={item.name} onChange={() => setSelectedEmployee(item)} />
               </label>
             ))}
           </div>

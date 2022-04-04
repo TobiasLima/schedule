@@ -17,10 +17,18 @@
 
   .col_6 {
     width: calc(60% - 1rem); 
+
+    @media(max-width: 902px) {
+      width: 100%;
+    }
   }
 
   .col_4 {
     width: calc(40% - 1rem);
+
+    @media(max-width: 902px) {
+      width: 100%;
+    }
   }
 }
 
