@@ -20,7 +20,7 @@ const modalStyles = {
     border: '0',
     width: '600px',
     maxWidth: '100%',
-    maxHeight: '90vh'
+    maxHeight: '90vh',
   },
 };
 
