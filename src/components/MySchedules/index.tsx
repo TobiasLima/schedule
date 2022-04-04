@@ -42,8 +42,10 @@ export function MySchedules({showModal, closeModal}: MySchedulesProps) {
   const [schedules, setSchedules] = useState<scheduleProps[]>([]);
 
   useEffect(() => {
-    const schedulesAux = JSON.parse(localStorage.getItem("_SCHEDULES") || '');
-    setSchedules(schedulesAux);
+    if(showModal) {
+      const schedulesAux = JSON.parse(localStorage.getItem("_SCHEDULES") || '');
+      setSchedules(schedulesAux);
+    }
   }, [showModal]);
 
   function handleRemoveSchedule(scheduleId: number) {
