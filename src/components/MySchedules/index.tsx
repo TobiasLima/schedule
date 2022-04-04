@@ -43,8 +43,8 @@ export function MySchedules({showModal, closeModal}: MySchedulesProps) {
 
   useEffect(() => {
     if(showModal) {
-      const schedulesAux = JSON.parse(localStorage.getItem("_SCHEDULES") || '');
-      setSchedules(schedulesAux);
+      // const schedulesAux = JSON.parse(localStorage.getItem("_SCHEDULES") || '');
+      // setSchedules(schedulesAux);
     }
   }, [showModal]);
 
@@ -60,7 +60,7 @@ export function MySchedules({showModal, closeModal}: MySchedulesProps) {
         try {
           const newSchedule = schedules.filter((item, index) => index !== scheduleId);
           setSchedules(newSchedule);
-          localStorage.setItem('_SCHEDULES', JSON.stringify(newSchedule));
+          // localStorage.setItem('_SCHEDULES', JSON.stringify(newSchedule));
           Swal.fire('Cancelado', '', 'success');
           // closeModal();
         } catch(err) {
