@@ -102,7 +102,8 @@ export function ScheduleForm({scheduleData, closeForm}: FormModalProps) {
 
   const onSubmit: SubmitHandler<IFormInput> = (data) => {
     try {
-      let schedules = JSON.parse(localStorage.getItem("_SCHEDULES") || '');
+      const schedulesStorage = localStorage.getItem("_SCHEDULES") || '{}';
+      let schedules = JSON.parse(schedulesStorage);
       if(isArray(schedules)){
         schedules.push(data);
       }else{

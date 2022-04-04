@@ -43,7 +43,7 @@ export function MySchedules({showModal, closeModal}: MySchedulesProps) {
 
   useEffect(() => {
     if(showModal) {
-      const schedulesAux = JSON.parse(localStorage.getItem("_SCHEDULES") || '');
+      const schedulesAux = JSON.parse(localStorage.getItem("_SCHEDULES") || '{}');
       setSchedules(schedulesAux);
     }
   }, [showModal]);
